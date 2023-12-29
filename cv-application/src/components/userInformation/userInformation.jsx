@@ -1,11 +1,10 @@
-import { useState } from "react";
 import styles from "./userInformation.module.css";
 
-export default function UserInformation() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-
+export default function UserInformation({
+  setFirstName,
+  setLastName,
+  setEmail,
+}) {
   function handleFirstNameChange(event) {
     setFirstName(event.target.value);
   }
@@ -37,9 +36,6 @@ export default function UserInformation() {
           <input type="text" name="email" onChange={handleEmailChange} />
         </label>
       </form>
-      <h1>
-        {firstName} {lastName} {email}
-      </h1>
     </div>
   );
 }

@@ -1,3 +1,31 @@
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.infoBox {
+  margin-left: 10px;
+}
+
+.resume {
+  margin-left: 10px;
+  color: black;
+}
+
+.sheet {
+  background-color: white;
+  width: 595px;
+  height: 845px;
+}
+
+.Contain {
+  display: flex;
+  justify-content: space-between;
+  gap: 500px;
+}
+
 .userInformation {
   display: flex;
   flex-direction: column;

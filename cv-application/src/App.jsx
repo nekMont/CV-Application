@@ -4,22 +4,34 @@ import viteLogo from "/vite.svg";
 import EducationalExperience from "./components/education/Education.jsx";
 import UserInformation from "./components/userInformation/userInformation.jsx";
 import PersonalExperience from "./components/experience/Experience.jsx";
+import DisplayComponent from "./components/Display/DisplayComponent.jsx";
+//import Resume from "./components/resume/resume.jsx";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
 
   return (
-    <>
-      <div className="userInformation">
-        <h2>General Information</h2>
-        <UserInformation />
-        <h2>Education</h2>
-        <EducationalExperience />
-        <h2>Experience</h2>
-        <PersonalExperience />
+    <div className="Contain">
+      <div className="infoBox">
+        <UserInformation
+          setFirstName={setFirstName}
+          setLastName={setLastName}
+          setEmail={setEmail}
+        />
       </div>
-    </>
+      <div className="sheet">
+        <div className="resume">
+          <DisplayComponent
+            firstName={firstName}
+            lastName={lastName}
+            email={email}
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 
