@@ -15,9 +15,12 @@
 }
 
 .sheet {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   width: 595px;
   height: 845px;
+  gap: 10px;
 }
 
 .Contain {

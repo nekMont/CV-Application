@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./experience.module.css";
 
-export default function PersonalExperience() {
-  const [company, setCompany] = useState("");
-  const [position, setPosition] = useState("");
-  const [responsibilities, setResponsibilities] = useState("");
-  const [date, setdate] = useState("");
-
+export default function PersonalExperience({
+  setCompanycompany,
+  setPosition,
+  setResponsibilities,
+  setDate,
+}) {
   function handleCompany(event) {
     setCompany(event.target.value);
   }
@@ -41,14 +41,7 @@ export default function PersonalExperience() {
           Rsponsibilities:
           <input type="text" name="date" onChange={handleResponsibilies} />
         </label>
-        <label>
-          Rsponsibilities:
-          <input type="text" name="date" onChange={handleDate} />
-        </label>
       </form>
-      <h1>
-        {company} {position} {responsibilities} {date}
-      </h1>
     </div>
   );
 }
