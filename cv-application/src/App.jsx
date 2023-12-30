@@ -46,11 +46,13 @@ function App() {
       </div>
       <div className="sheet">
         <div className="resume">
-          <DisplayComponent
-            firstName={firstName}
-            lastName={lastName}
-            email={email}
-          />
+          <div className="personalInformation">
+            <DisplayComponent
+              firstName={firstName}
+              lastName={lastName}
+              email={email}
+            />
+          </div>
           <div className="education">
             <DisplayEducation
               schoolName={schoolName}

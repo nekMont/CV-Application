@@ -2,3 +2,18 @@ p {
   margin: 0px;
   padding: 0px;
 }
+
+.formatting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.name,
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
