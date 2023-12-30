@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import EducationalExperience from "./components/education/Education.jsx";
 import UserInformation from "./components/userInformation/userInformation.jsx";
 import PersonalExperience from "./components/experience/Experience.jsx";
@@ -44,6 +42,9 @@ function App() {
           setDate={setDate}
         />
       </div>
+
+      {/* TODO: Need to re work so that a useState generates the header of each subject. we want to enter */}
+      {/* TODO: also probably need to look into grids and practice that so that I can format the "sheet tot he specifics I want" */}
       <div className="sheet">
         <div className="resume">
           <div className="personalInformation">
@@ -54,6 +55,8 @@ function App() {
             />
           </div>
           <div className="education">
+            <h3>Education</h3>
+            <hr className="solid"></hr>
             <DisplayEducation
               schoolName={schoolName}
               major={major}
@@ -62,6 +65,8 @@ function App() {
           </div>
 
           <div className="experience">
+            <h3>Experience</h3>
+            <hr className="solid"></hr>
             <DisplayExperience
               company={company}
               position={position}

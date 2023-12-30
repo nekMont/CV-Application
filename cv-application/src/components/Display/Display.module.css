@@ -10,10 +10,3 @@ p {
   flex-direction: column;
   width: 100%;
 }
-.name,
-.email {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}

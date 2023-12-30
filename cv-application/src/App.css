@@ -5,11 +5,9 @@ body {
   min-height: 100vh; /* Full viewport height */
   margin: 0; /* Remove default margin */
 }
-.resume {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.solid {
+  border-top: 3px solid black;
 }
 
 .infoBox {
@@ -19,10 +17,21 @@ body {
 }
 
 .resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-left: 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
   font-size: 12px;
+  text-align: center;
+}
+
+.personalInformation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sheet {
