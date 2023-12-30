@@ -1,8 +1,7 @@
-import { useState } from "react";
 import styles from "./experience.module.css";
 
 export default function PersonalExperience({
-  setCompanycompany,
+  setCompany,
   setPosition,
   setResponsibilities,
   setDate,
@@ -20,27 +19,31 @@ export default function PersonalExperience({
   }
 
   function handleDate(event) {
-    setdate(event.target.value);
+    setDate(event.target.value);
   }
 
   return (
-    <div>
+    <div className={styles.userInformationBox}>
       <form
         className={styles.userInfo}
         onSubmit={(event) => event.preventDefault()}
       >
-        <label>
-          Company:
-          <input type="text" name="school" onChange={handleCompany} />
-        </label>
-        <label>
-          Position:
-          <input type="text" name="major" onChange={handlePosition} />
-        </label>
-        <label>
-          Rsponsibilities:
-          <input type="text" name="date" onChange={handleResponsibilies} />
-        </label>
+        <div className={styles.formGroup}>
+          <label>Company:</label>
+          <input type="text" onChange={handleCompany} />
+        </div>
+        <div className={styles.formGroup}>
+          <label>Position:</label>
+          <input type="text" name="last name" onChange={handlePosition} />
+        </div>
+        <div className={styles.formGroup}>
+          <label>Responsibilites:</label>
+          <input type="text" name="email" onChange={handleResponsibilies} />
+        </div>
+        <div className={styles.formGroup}>
+          <label>Date:</label>
+          <input type="text" name="email" onChange={handleDate} />
+        </div>
       </form>
     </div>
   );

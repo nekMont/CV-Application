@@ -1,11 +1,10 @@
-import { useState } from "react";
 import styles from "./education.module.css";
 
-export default function EducationalExperience() {
-  const [schoolName, setSchoolName] = useState("");
-  const [major, setMajor] = useState("");
-  const [date, setDate] = useState("");
-
+export default function EducationalExperience({
+  setSchoolName,
+  setMajor,
+  setDateEducation,
+}) {
   function handleSchoolName(event) {
     setSchoolName(event.target.value);
   }
@@ -15,31 +14,28 @@ export default function EducationalExperience() {
   }
 
   function handleDate(event) {
-    setDate(event.target.value);
+    setDateEducation(event.target.value);
   }
 
   return (
-    <div>
+    <div className={styles.userInformationBox}>
       <form
         className={styles.userInfo}
         onSubmit={(event) => event.preventDefault()}
       >
-        <label>
-          School:
-          <input type="text" name="school" onChange={handleSchoolName} />
-        </label>
-        <label>
-          Major:
-          <input type="text" name="major" onChange={handleMajor} />
-        </label>
-        <label>
-          Date:
-          <input type="text" name="date" onChange={handleDate} />
-        </label>
+        <div className={styles.formGroup}>
+          <label>School Name:</label>
+          <input type="text" onChange={handleSchoolName} />
+        </div>
+        <div className={styles.formGroup}>
+          <label>Major:</label>
+          <input type="text" name="last name" onChange={handleMajor} />
+        </div>
+        <div className={styles.formGroup}>
+          <label>Date:</label>
+          <input type="text" name="email" onChange={handleDate} />
+        </div>
       </form>
-      <h1>
-        {schoolName} {major} {date}
-      </h1>
     </div>
   );
 }

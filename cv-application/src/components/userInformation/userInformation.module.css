@@ -1,7 +1,37 @@
+.userInformationBox {
+  max-width: 200px; /* Keeping the small maximum width */
+  width: 100%; /* Using full width of the parent up to the max-width */
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px; /* Reduced padding */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
 .userInfo {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  gap: 10px;
+  align-items: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5px; /* Reduced margin */
+}
+
+.formGroup label {
+  color: black;
+  margin-bottom: 2px; /* Reduced margin */
+  font-weight: bold;
+  font-size: 12px; /* Reduced font size */
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 4px; /* Reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px; /* Reduced font size */
 }

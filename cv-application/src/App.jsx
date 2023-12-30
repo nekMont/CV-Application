@@ -8,16 +8,21 @@ import DisplayComponent from "./components/Display/DisplayComponent.jsx";
 //import Resume from "./components/resume/resume.jsx";
 import "./App.css";
 import DisplayExperience from "./components/Display/DisplayExperience.jsx";
+import DisplayEducation from "./components/Display/DisplayEducation.jsx";
 
 function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
 
+  const [schoolName, setSchoolName] = useState("");
+  const [major, setMajor] = useState("");
+  const [dateEducation, setDateEducation] = useState("");
+
   const [company, setCompany] = useState("");
   const [position, setPosition] = useState("");
   const [responsibilities, setResponsibilities] = useState("");
-  const [date, setdate] = useState("");
+  const [date, setDate] = useState("");
 
   return (
     <div className="Contain">
@@ -27,11 +32,16 @@ function App() {
           setLastName={setLastName}
           setEmail={setEmail}
         />
+        <EducationalExperience
+          setSchoolName={setSchoolName}
+          setMajor={setMajor}
+          setDateEducation={setDateEducation}
+        />
         <PersonalExperience
-          setCompanyompany={company}
-          setPosition={position}
-          setResponsibilities={responsibilities}
-          setDate={date}
+          setCompany={setCompany}
+          setPosition={setPosition}
+          setResponsibilities={setResponsibilities}
+          setDate={setDate}
         />
       </div>
       <div className="sheet">
@@ -41,7 +51,13 @@ function App() {
             lastName={lastName}
             email={email}
           />
-          <div className="education"></div>
+          <div className="education">
+            <DisplayEducation
+              schoolName={schoolName}
+              major={major}
+              dateEducation={dateEducation}
+            />
+          </div>
 
           <div className="experience">
             <DisplayExperience

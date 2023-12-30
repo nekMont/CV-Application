@@ -18,23 +18,23 @@ export default function UserInformation({
   }
 
   return (
-    <div>
+    <div className={styles.userInformationBox}>
       <form
         className={styles.userInfo}
         onSubmit={(event) => event.preventDefault()}
       >
-        <label>
-          first Name:
+        <div className={styles.formGroup}>
+          <label>First Name:</label>
           <input type="text" onChange={handleFirstNameChange} />
-        </label>
-        <label>
-          Last Name:
+        </div>
+        <div className={styles.formGroup}>
+          <label>Last Name:</label>
           <input type="text" name="last name" onChange={handleLastNameChange} />
-        </label>
-        <label>
-          Email:
+        </div>
+        <div className={styles.formGroup}>
+          <label>Email:</label>
           <input type="text" name="email" onChange={handleEmailChange} />
-        </label>
+        </div>
       </form>
     </div>
   );

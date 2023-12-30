@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
 .resume {
   display: flex;
   justify-content: center;
@@ -6,7 +13,9 @@
 }
 
 .infoBox {
-  margin-left: 10px;
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
 }
 
 .resume {
@@ -25,17 +34,8 @@
 
 .Contain {
   display: flex;
-  justify-content: space-between;
-  gap: 500px;
-}
-
-.userInformation {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  margin-top: 100px;
-  margin-left: 100px;
+  flex-direction: row;
+  gap: 100px;
 }
 
 .logo {
