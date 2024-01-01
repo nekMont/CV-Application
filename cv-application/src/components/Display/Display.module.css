@@ -10,3 +10,13 @@ p {
   flex-direction: column;
   width: 100%;
 }
+
+.educationFormatting p {
+  padding-left: 20px;
+}
+
+.titleAndDate {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}

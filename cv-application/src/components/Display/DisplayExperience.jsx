@@ -8,9 +8,14 @@ export default function DisplayExperience({
 }) {
   return (
     <>
-      <p>
-        {company} {position} {responsibilities} {date}
-      </p>
+      <div className="titleAndDate">
+        <div>{company}</div>
+        <div>{date}</div>
+      </div>
+      <div className="formatting">
+        <p>{position}</p>
+        <p>{responsibilities}</p>
+      </div>
     </>
   );
 }

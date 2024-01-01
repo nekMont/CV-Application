@@ -3,7 +3,6 @@ import EducationalExperience from "./components/education/Education.jsx";
 import UserInformation from "./components/userInformation/userInformation.jsx";
 import PersonalExperience from "./components/experience/Experience.jsx";
 import DisplayComponent from "./components/Display/DisplayComponent.jsx";
-//import Resume from "./components/resume/resume.jsx";
 import "./App.css";
 import DisplayExperience from "./components/Display/DisplayExperience.jsx";
 import DisplayEducation from "./components/Display/DisplayEducation.jsx";
@@ -63,7 +62,6 @@ function App() {
               dateEducation={dateEducation}
             />
           </div>
-
           <div className="experience">
             <h3>Experience</h3>
             <hr className="solid"></hr>

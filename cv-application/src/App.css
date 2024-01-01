@@ -17,21 +17,21 @@ body {
 }
 
 .resume {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 10px;
+  display: grid;
+  grid-template-rows: 80px 100px 100px;
+  gap: 10px;
   color: black;
   font-family: "Times New Roman", Times, serif;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
 }
 
 .personalInformation {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightgrey;
+  text-align: center;
 }
 
 .sheet {
